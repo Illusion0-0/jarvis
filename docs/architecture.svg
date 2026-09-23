@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1010" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <style>
+    .box{rx:10;stroke-width:2;}
+    .bt{font-size:14px;font-weight:600;}
+    .bs{font-size:11.5px;fill:#334155;}
+    .lbl{font-size:12px;font-weight:700;fill:#64748b;letter-spacing:1.5px;}
+    .fl{stroke:#94a3b8;stroke-width:2;fill:none;}
+  </style>
+
+  <rect x="0" y="0" width="1440" height="1010" fill="#ffffff"/>
+  <text x="720" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">JARVIS — Personal AI Clone · Reference Architecture</text>
+
+  <!-- INTERFACES -->
+  <text x="40" y="72" class="lbl">INTERFACES</text>
+  <g>
+    <rect class="box" x="40"  y="80" width="252" height="64" fill="#dbeafe" stroke="#3b82f6"/><text x="166" y="107" text-anchor="middle" class="bt">Chat (Telegram)</text><text x="166" y="127" text-anchor="middle" class="bs">always-on, from anywhere</text>
+    <rect class="box" x="312" y="80" width="252" height="64" fill="#dbeafe" stroke="#3b82f6"/><text x="438" y="107" text-anchor="middle" class="bt">Voice</text><text x="438" y="127" text-anchor="middle" class="bs">speaks in a cloned voice</text>
+    <rect class="box" x="584" y="80" width="252" height="64" fill="#dbeafe" stroke="#3b82f6"/><text x="710" y="107" text-anchor="middle" class="bt">Web Dashboard</text><text x="710" y="127" text-anchor="middle" class="bs">tunneled, OTP-protected</text>
+    <rect class="box" x="856" y="80" width="252" height="64" fill="#dbeafe" stroke="#3b82f6"/><text x="982" y="107" text-anchor="middle" class="bt">CLI / SSH</text><text x="982" y="127" text-anchor="middle" class="bs">admin console</text>
+    <rect class="box" x="1128" y="80" width="272" height="64" fill="#dbeafe" stroke="#3b82f6"/><text x="1264" y="107" text-anchor="middle" class="bt">Scheduled pushes</text><text x="1264" y="127" text-anchor="middle" class="bs">digests arrive unprompted</text>
+  </g>
+
+  <!-- MEMORY (left) -->
+  <text x="40" y="182" class="lbl">MEMORY</text>
+  <g>
+    <rect class="box" x="40" y="190" width="300" height="88" fill="#dcfce7" stroke="#16a34a"/><text x="190" y="218" text-anchor="middle" class="bt">Second Brain</text><text x="190" y="238" text-anchor="middle" class="bs">git-synced knowledge vault,</text><text x="190" y="254" text-anchor="middle" class="bs">the clone's long-term identity</text>
+    <rect class="box" x="40" y="294" width="300" height="78" fill="#dcfce7" stroke="#16a34a"/><text x="190" y="322" text-anchor="middle" class="bt">Conversation Log</text><text x="190" y="342" text-anchor="middle" class="bs">full history, timestamped</text>
+    <rect class="box" x="40" y="388" width="300" height="88" fill="#dcfce7" stroke="#16a34a"/><text x="190" y="416" text-anchor="middle" class="bt">Distillation Loop</text><text x="190" y="436" text-anchor="middle" class="bs">learned facts written back</text><text x="190" y="452" text-anchor="middle" class="bs">to the brain — it compounds</text>
+    <rect class="box" x="40" y="490" width="300" height="60" fill="#dcfce7" stroke="#16a34a"/><text x="190" y="515" text-anchor="middle" class="bt">Nightly Encrypted Backup</text><text x="190" y="535" text-anchor="middle" class="bs">private git mirror, secrets excluded</text>
+  </g>
+
+  <!-- AGENT CORE (center) -->
+  <text x="380" y="182" class="lbl">AGENT CORE</text>
+  <rect class="box" x="380" y="190" width="640" height="360" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/>
+  <g>
+    <rect class="box" x="405" y="215" width="290" height="80" fill="#ede9fe" stroke="#7c3aed"/><text x="550" y="245" text-anchor="middle" class="bt">Gateway</text><text x="550" y="265" text-anchor="middle" class="bs">auth, allowlists, per-user routing</text>
+    <rect class="box" x="715" y="215" width="280" height="80" fill="#ede9fe" stroke="#7c3aed"/><text x="855" y="245" text-anchor="middle" class="bt">Persona &amp; Identity</text><text x="855" y="265" text-anchor="middle" class="bs">system prompt + personal API</text>
+    <rect class="box" x="405" y="311" width="590" height="112" fill="#ede9fe" stroke="#7c3aed"/><text x="700" y="340" text-anchor="middle" class="bt">Orchestrator</text><text x="700" y="360" text-anchor="middle" class="bs">plans tasks · routes each call to the cheapest capable model</text><text x="700" y="378" text-anchor="middle" class="bs">chains tools · retries · verifies before acting</text>
+    <rect class="box" x="405" y="437" width="590" height="86" fill="#ede9fe" stroke="#7c3aed"/><text x="700" y="465" text-anchor="middle" class="bt">Skill &amp; Tool Registry</text><text x="700" y="485" text-anchor="middle" class="bs">pluggable skills (search, media, voice, publishing, ops)</text><text x="700" y="503" text-anchor="middle" class="bs">MCP servers + custom toolsets</text>
+  </g>
+
+  <!-- INTELLIGENCE (right) -->
+  <text x="1060" y="182" class="lbl">INTELLIGENCE</text>
+  <g>
+    <rect class="box" x="1060" y="190" width="340" height="80" fill="#fef3c7" stroke="#d97706"/><text x="1230" y="218" text-anchor="middle" class="bt">Tier 0 — Small Model</text><text x="1230" y="238" text-anchor="middle" class="bs">routine chat, cron jobs, ~90% of calls</text>
+    <rect class="box" x="1060" y="284" width="340" height="80" fill="#fef3c7" stroke="#d97706"/><text x="1230" y="312" text-anchor="middle" class="bt">Tier 1 — Frontier Model</text><text x="1230" y="332" text-anchor="middle" class="bs">hard reasoning, on-demand escalation</text>
+    <rect class="box" x="1060" y="378" width="340" height="80" fill="#fef3c7" stroke="#d97706"/><text x="1230" y="406" text-anchor="middle" class="bt">Vision Model</text><text x="1230" y="426" text-anchor="middle" class="bs">photos &amp; video understanding</text>
+    <rect class="box" x="1060" y="472" width="340" height="78" fill="#fef3c7" stroke="#d97706"/><text x="1230" y="500" text-anchor="middle" class="bt">Voice Engine</text><text x="1230" y="520" text-anchor="middle" class="bs">cloned TTS, runs on CPU</text>
+  </g>
+
+  <!-- TOOL BELT -->
+  <text x="40" y="582" class="lbl">TOOL BELT — WHAT IT CAN TOUCH</text>
+  <g>
+    <rect class="box" x="40"  y="590" width="262" height="72" fill="#ffe4e6" stroke="#e11d48"/><text x="171" y="619" text-anchor="middle" class="bt">Web &amp; Social Search</text><text x="171" y="639" text-anchor="middle" class="bs">YouTube · X · Instagram · blogs</text>
+    <rect class="box" x="322" y="590" width="262" height="72" fill="#ffe4e6" stroke="#e11d48"/><text x="453" y="619" text-anchor="middle" class="bt">Media Understanding</text><text x="453" y="639" text-anchor="middle" class="bs">image · video · audio analysis</text>
+    <rect class="box" x="604" y="590" width="262" height="72" fill="#ffe4e6" stroke="#e11d48"/><text x="735" y="619" text-anchor="middle" class="bt">Documents</text><text x="735" y="639" text-anchor="middle" class="bs">PDF / docx / sheets parsing</text>
+    <rect class="box" x="886" y="590" width="262" height="72" fill="#ffe4e6" stroke="#e11d48"/><text x="1017" y="619" text-anchor="middle" class="bt">Publishing</text><text x="1017" y="639" text-anchor="middle" class="bs">dashboards · reports · notes</text>
+    <rect class="box" x="1168" y="590" width="232" height="72" fill="#ffe4e6" stroke="#e11d48"/><text x="1284" y="619" text-anchor="middle" class="bt">System Ops</text><text x="1284" y="639" text-anchor="middle" class="bs">shell · services · git</text>
+  </g>
+
+  <!-- AUTOMATION -->
+  <text x="40" y="694" class="lbl">AUTOMATION — IT ACTS WHILE YOU SLEEP</text>
+  <g>
+    <rect class="box" x="380" y="702" width="300" height="70" fill="#cffafe" stroke="#0891b2"/><text x="530" y="730" text-anchor="middle" class="bt">Cron Scheduler</text><text x="530" y="750" text-anchor="middle" class="bs">daily briefings, check-ins, syncs</text>
+    <rect class="box" x="710" y="702" width="310" height="70" fill="#cffafe" stroke="#0891b2"/><text x="865" y="730" text-anchor="middle" class="bt">Watchers</text><text x="865" y="750" text-anchor="middle" class="bs">boards, prices, pages, feeds</text>
+  </g>
+
+  <!-- FOUNDATION -->
+  <text x="40" y="806" class="lbl">FOUNDATION</text>
+  <rect class="box" x="40" y="814" width="1360" height="76" fill="#e2e8f0" stroke="#475569"/>
+  <text x="720" y="845" text-anchor="middle" class="bt">Self-Managed Free-Tier Cloud VM (2 ARM cores · 12 GB RAM)</text>
+  <text x="720" y="867" text-anchor="middle" class="bs">systemd services · survives reboots · hardened SSH · encrypted secrets at rest · tunnel-only exposure · automated backups</text>
+  <text x="720" y="925" text-anchor="middle" font-size="12" fill="#94a3b8">Every arrow is a real, running path — not aspirational. Voice cloning only with the owner's consent (see README).</text>
+
+  <!-- ARROWS -->
+  <g>
+    <line x1="166"  y1="144" x2="500" y2="188" class="fl" marker-end="url(#arr)"/>
+    <line x1="438"  y1="144" x2="620" y2="188" class="fl" marker-end="url(#arr)"/>
+    <line x1="710"  y1="144" x2="710" y2="188" class="fl" marker-end="url(#arr)"/>
+    <line x1="982"  y1="144" x2="830" y2="188" class="fl" marker-end="url(#arr)"/>
+    <line x1="1264" y1="144" x2="900" y2="188" class="fl" marker-end="url(#arr)"/>
+    <line x1="340" y1="330" x2="378" y2="330" class="fl" marker-end="url(#arr)" marker-start="url(#arr)"/>
+    <line x1="1022" y1="330" x2="1058" y2="330" class="fl" marker-end="url(#arr)"/>
+    <line x1="700" y1="550" x2="700" y2="588" class="fl" marker-end="url(#arr)"/>
+    <line x1="530" y1="702" x2="560" y2="552" class="fl" marker-end="url(#arr)"/>
+    <line x1="865" y1="702" x2="840" y2="552" class="fl" marker-end="url(#arr)"/>
+  </g>
+</svg>

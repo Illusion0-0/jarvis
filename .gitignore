@@ -1,0 +1,4 @@
+*.env
+*.token
+*credentials*
+.DS_Store
